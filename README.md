@@ -29,7 +29,7 @@ $personObj=new Person();
 $people=$personObj->getAll();
 //get people whose lastname is Doe
 $people=$personObj->getAll([],["lastname"=>"Doe"]);
-//get first 5 firstnames of people with lastname Doe and order by lastname in descending order
+//get first 5 firstnames of people with lastname Doe and order them by their lastnames in descending order
 $people=$personObj->getAll(["firstname"],["lastname"=>"Doe"],"AND","lastname","DESC",5);
 ```
 
