@@ -2,9 +2,11 @@
 PDO CRUD library
 
 ## Usage
-Create a class that extends pdoque
-specify the tablename as first argument if model name not the same in database
-specify the primary key field name if it is different from 'id'
+Create a class that extends pdoque.
+
+Specify the tablename as first argument if model name not the same in database.
+
+Specify the primary key field name if it is different from 'id'.
 ```php
 class Person extends pdoque{
     public function __construct() {
@@ -23,7 +25,12 @@ Takes 6 arguments.
 
 ```php
 $personObj=new Person();
-$people=$personObj->getAll(["firstname"],["lastname"=>"Doe"],"AND","lastname",5);
+//get all people with no condition
+$people=$personObj->getAll();
+//get people whose lastname is Doe
+$people=$personObj->getAll([],["lastname"=>"Doe"]);
+//get first 5 firstnames of people with lastname Doe and order by lastname in descending order
+$people=$personObj->getAll(["firstname"],["lastname"=>"Doe"],"AND","lastname","DESC",5);
 ```
 
 ## Select By Id
