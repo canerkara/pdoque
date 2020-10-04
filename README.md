@@ -1,10 +1,6 @@
 # pdoque
 PDO CRUD library
 
-## Installation
-```bash
-composer require pdoque
-```
 ## Usage
 Create a class that extends pdoque
 specify the tablename as first argument if model name not the same in database
